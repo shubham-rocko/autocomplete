@@ -1,4 +1,4 @@
-import { SyntheticEvent, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type FN = () => void;
 
@@ -46,8 +46,8 @@ const AutoComplete = () => {
     }
   }, [eventVal]);
 
-  const onChangeHandler = (event: SyntheticEvent) => {
-    setEventVal(event.target.value);
+  const onChangeHandler = (event: any) => {
+    setEventVal(event?.target?.value);
   }
 
   return (

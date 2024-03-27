@@ -28,8 +28,11 @@ function App() {
       startTime,
       commitTime,
       interactions,
-    }
-)
+    })
+  }
+
+  const methodDoesNotExist = () => {
+    console.error("Method not exist called")
   }
 
   return (
@@ -39,6 +42,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <Table />
         </QueryClientProvider>
+        <button onClick={() => methodDoesNotExist()}>Break the world</button>;
       </Profiler> 
     </>
   )

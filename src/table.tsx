@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 
 
@@ -16,7 +16,7 @@ const fetchPokemonAbility = async (url: string) => {
 
 
 const PokemonAbilities = ({url, index}: any) => {
-  const { data, isLoading, error } = useQuery(`exampleQueryKey_${index}`, () => fetchPokemonAbility(url));
+  const { data, isLoading } = useQuery(`exampleQueryKey_${index}`, () => fetchPokemonAbility(url));
   if (isLoading) {
     return <span>Data is still Loading... {index}</span>
   }
