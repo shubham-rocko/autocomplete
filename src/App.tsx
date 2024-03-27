@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   const methodDoesNotExist = () => {
-    console.error("Method not exist called")
+    console.error("Method not exist called", test)
   }
 
   return (
