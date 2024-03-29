@@ -6,13 +6,13 @@ import * as Sentry from "@sentry/react";
 
 Sentry.init({
   dsn: "https://b50aabfa86a104b4de78847c2f43771a@o4506983632732160.ingest.us.sentry.io/4506983679524864",
-  // integrations: [
-    // Sentry.browserTracingIntegration(),
-  //   Sentry.replayIntegration({
-  //     maskAllText: false,
-  //     blockAllMedia: false,
-  //   }),
-  // ],
+  integrations: [
+    Sentry.browserTracingIntegration(),
+    Sentry.replayIntegration({
+      maskAllText: false,
+      blockAllMedia: false,
+    }),
+  ],
   // Performance Monitoring
   tracesSampleRate: 1.0, //  Capture 100% of the transactions
   // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
