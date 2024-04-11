@@ -12,11 +12,11 @@ function App() {
       console.log(e);
     });
 
-    window.onerror(() => {
+    window.onerror = () => {
       Sentry.init({
         dsn: "https://b50aabfa86a104b4de78847c2f43771a@o4506983632732160.ingest.us.sentry.io/4506983679524864",
       })
-    });
+    };
   }, []);
 
   const methodDoesNotExist = () => {
